@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block title %} Analysis Results {% endblock %}
+
+{% block content %}
+    <div id="progress" style="display: block">
+        <h2 id="count"></h2>
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        <p id="message"></p>
+    </div>
+
+    <div id="results" style="display: none;">
+        <header>
+            <h2>Chat Analysis Results</h2>
+            <p></p>
+        </header>
+
+        <h3>Overview</h3>
+        <div class="box_wrapper">
+            <div id="messages" class="box">
+                <h4></h4>
+                <p>Messages</p>
+            </div>
+            <div id="media" class="box">
+                <h4></h4>
+                <p>Picture & Stickers</p>
+            </div>
+            <div id="links" class="box">
+                <h4></h4>
+                <p>Links</p>
+            </div>
+        </div>
+
+        <h3>Messages Bar Chart Race</h3>
+        <div name="viewof replay"></div>
+        <div name="chart"></div>
+
+        <h3>Users</h3>
+        <div class="box_wrapper" style="margin-top: 20px">
+            <div id="yapper" class="box">
+                <h4></h4>
+                <p>Is #1 yapper</p>
+                <p>with <strong></strong> messages</p>
+            </div>
+            <div style="flex: 2" class="box">
+                <div id="user-messages"></div>
+            </div>
+        </div>
+
+        <h3>Messages Graph</h3>
+        <div class="box_wrapper">
+            <div class="box">
+                <div id="messages-graph"></div>
+            </div>
+        </div>
+
+        <h3>Calendar HeatMap</h3>
+        <div class="box_wrapper">
+            <div class="box">
+                <div id="calendar"></div>
+            </div>
+        </div>
+
+        <h3>Average Words Per Message</h3>
+        <div class="box_wrapper">
+            <div class="box">
+                <div id="avgWords"></div>
+            </div>
+        </div>
+
+        <h3>Average Messages Per Day</h3>
+        <div class="box_wrapper">
+            <div class="box">
+                <div id="avgMsgs"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.2/d3.min.js"
+            integrity="sha512-oKI0pS1ut+mxQZdqnD3w9fqArLyILRsT3Dx0B+8RVEXzEk3aNK3J3pWlaGJ8MtTs1oiwyXDAH6hG6jy1sY0YqA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}" type="module"></script>
+
+{% endblock %}

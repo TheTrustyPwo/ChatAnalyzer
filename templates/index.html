@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Welcome to Whatsapp Chat Analyzer {% endblock %}</h1>
+
+    <form action="analyze" method="POST" enctype="multipart/form-data">
+         <input type="file" name="file">
+         <input type="submit">
+    </form>
+{% endblock %}

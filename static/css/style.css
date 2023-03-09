@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,700i,900,900i');
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	width: 100%;
+	background: #a3639f;
+	background: -moz-linear-gradient(-45deg,  #a3639f 0%, #6c90af 49%, #86c3a7 100%);
+	background: -webkit-linear-gradient(-45deg,  #a3639f 0%,#6c90af 49%,#86c3a7 100%);
+	background: linear-gradient(135deg,  #a3639f 0%,#6c90af 49%,#86c3a7 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a3639f', endColorstr='#86c3a7',GradientType=1 );
+	min-height: 100%;
+}
+
+.rtl {
+	direction: rtl;
+}
+
+button {
+	outline: 0;
+}
+
+.button {
+	background: none;
+	border: none;
+	border-radius: 5px;
+	padding: 5px 20px;
+	color: #fff;
+	background: #ce2533;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.2s ease;
+	text-decoration: none;
+}
+
+.button:hover {
+	background: #d4313f;
+}
+
+#header {
+	background: #fff;
+	position: relative;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 80px;
+	flex-wrap: wrap;
+}
+
+#header h1 {
+	font-size: 24px;
+	margin: 0;
+	letter-spacing: 0.025em;
+	text-transform: uppercase;
+	display: inline-block;
+	position: relative;
+	padding-left: 35px;
+	color: #111;
+}
+
+#header h1 .slogan {
+	font-size: 14px;
+	font-weight: 300;
+	color: #656565;
+	display: block;
+	text-transform: none;
+	margin-left: -35px;
+	margin-top: 3px;
+}
+
+#header h1 a {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	z-index: 10;
+}
+
+footer {
+	background: #fff;
+	padding: 30px 0;
+	width: 100%;
+	text-align: center;
+	color: #656565;
+	font-weight: 300;
+	font-size: 14px;
+}
+
+footer p {
+	margin: 0;
+}
+
+footer p {
+	margin-bottom: 10px;
+}
+
+footer p:last-child {
+	margin-bottom: 0;
+}
+
+footer .trademark {
+	font-size: 12px;
+	line-height: 16px;
+}
+
+footer a {
+	color: #000;
+}
+
+/* Visualization Page */
+
+#results {
+	text-align: center;
+	width: 90%;
+	box-sizing: border-box;
+	max-width: 1200px;
+	margin: 50px auto 80px;
+	padding: 40px;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+	min-height: 300px;
+	position: relative;
+}
+
+#results {
+	text-align: left;
+}
+
+#results header {
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+#progress {
+	text-align: center;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+}
+
+#results header h2, #progress h2 {
+	font-size: 48px;
+	margin: 0 0 10px;
+	color: #151515;
+	font-weight: 700;
+}
+
+#results header p, #progress p {
+	margin: 0;
+	direction: ltr;
+}
+
+#results h3 {
+	font-size: 24px;
+	font-weight: 300;
+	margin: 0 0 40px;
+	padding: 0 20px 10px;
+	border-bottom: 1px solid #efefef;
+}
+
+.rtl #results h3 {
+	text-align: right;
+}
+
+.box_wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 60px;
+	flex-wrap: wrap;
+}
+
+.box {
+	text-align: center;
+	flex: 1;
+	padding: 0 20px;
+	min-width: 200px;
+	word-wrap: break-word;
+}
+
+.box h4 {
+	font-size: 58px;
+	margin: 0 0 5px;
+	color: #151515;
+}
+
+.box strong {
+	font-weight: 700;
+	color: #151515;
+}
+
+.box p {
+	margin: 5px 0 0;
+	line-height: 24px;
+}
+
+/* 404 */
+
+#not_found {
+	text-align: center;
+	color: #fff;
+	padding-bottom: 100px;
+}
+
+.not_found_title {
+	font-size: 120px;
+	margin: 0;
+	line-height: 120px;
+	font-weight: 900;
+	color: #fff;
+}
+
+#not_found p {
+	margin-bottom: 60px;
+	font-weight: 300;
+}
+
+@media (max-width: 900px) {
+	#results {
+		padding: 20px;
+	}
+
+	.box {
+		padding-bottom: 20px;
+	}
+}
+
+@media (max-width: 600px) {
+	#header {
+		flex-direction: column;
+	}
+
+	#header hgroup {
+		margin-bottom: 20px;
+	}
+
+	nav {
+		text-align: center;
+	}
+
+	nav a {
+		padding: 0 20px;
+		margin-bottom: 10px;
+	}
+}
