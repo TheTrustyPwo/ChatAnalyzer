@@ -1,14 +1,10 @@
-import json
 import os
 import uuid
 import zipfile
-from threading import Thread
 
-import redis
-from flask import Flask, render_template, request, redirect, jsonify
-from werkzeug.utils import secure_filename
+from flask import Flask, render_template, request, redirect
 from flask_pymongo import PyMongo
-from flask_redis import FlaskRedis
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
