@@ -2,9 +2,12 @@ import os
 import uuid
 import zipfile
 
+from dotenv import load_dotenv
 from flask import Flask, render_template, request, redirect
 from flask_pymongo import PyMongo
 from werkzeug.utils import secure_filename
+
+load_dotenv()
 
 app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
