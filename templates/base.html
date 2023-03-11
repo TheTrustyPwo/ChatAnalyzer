@@ -5,9 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+
     <!-- Bootstrap CSS -->
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/new.css') }}">
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -23,7 +26,7 @@
     <title>{% block title %} {% endblock %}</title>
 </head>
 <body>
-<nav class="navbar">
+<!-- <nav class="navbar">
     <a class="navbar-brand" href="{{ url_for('index') }}">Whatsapp Chat Analyzer</a>
     <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -33,7 +36,20 @@
             <a class="nav-link" href="#">About</a>
         </li>
     </ul>
-</nav>
+</nav> -->
+
+<div id="header-container">
+    <div class="header-wrapper">
+
+    </div>
+    <div class="header-wrapper">
+        <ul class="navbar">
+            <li class="nav-item">
+                <a href="#"><div>About</div></a>
+            </li>
+        </ul>
+    </div>
+</div>
 
 <div class="container">
     {% block content %} {% endblock %}

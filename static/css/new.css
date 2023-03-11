@@ -1,0 +1,194 @@
+@import url('https://fonts.cdnfonts.com/css/graphik');
+
+:root {
+    --font-sans: "Graphik", sans-serif;
+    --font-serif: "Graphik", sans-serif;
+    --font-main: "Graphik", sans-serif;
+    --fs-base: 16px;
+    --fs-xs: calc(var(--fs-base) * 0.75);
+    --fs-s: calc(var(--fs-base) * 0.875);
+    --fs-m: var(--fs-base);
+    --fs-l: calc(var(--fs-base) * 1.125);
+    --fs-xl: calc(var(--fs-base) * 1.25);
+    --lh-base: 1.5;
+    --lh-xs: 1;
+    --lh-sm: calc(var(--lh-base) * 0.8);
+    --lh-md: var(--lh-base);
+    --lh-lg: calc(var(--lh-base) * 1.25);
+    --lh-text: 1.625;
+    --container: 1176px;
+    --wrapper: 744px;
+    --wrapper-lg: 792px;
+    --gap: 24px;
+    --sp: 16px;
+    --hello-bar: 96px;
+    --sp03: calc(var(--sp) * 0.25);
+    --sp02: calc(var(--sp) * 0.5);
+    --sp01: calc(var(--sp) * 0.75);
+    --sp0: var(--sp);
+    --sp1: calc(var(--sp) * 1.5);
+    --sp2: calc(var(--sp) * 2);
+    --sp3: calc(var(--sp) * 3);
+    --sp4: calc(var(--sp) * 4);
+    --sp5: calc(var(--sp) * 5);
+    --sp6: calc(var(--sp) * 6);
+    --sp-section: 56px;
+    --gap-sm: calc(var(--gap) / 2);
+    --gap-md: var(--gap);
+    --gap-lg: 40px;
+    --br-base: 4px;
+    --br-sm: calc(var(--br-base) / 2);
+    --br-md: var(--br-base);
+    --br-lg: calc(var(--br-base) * 2);
+    --br-xl: calc(var(--br-base) * 4);
+    --shadow-sm: 0 0.125rem 0.25rem rgb(0 0 0/8%);
+    --transition: all 250ms ease 0s;
+    --c-sonic-100: #f2faff;
+    --c-sonic-200: #ddf2ff;
+    --c-sonic-300: #97d3ff;
+    --c-sonic-400: #5bb1f1;
+    --c-sonic-500: #2a95e2;
+    --c-sonic-600: #0073c7;
+    --c-sonic-700: #005ab8;
+    --c-candy-100: #fff6f5;
+    --c-candy-200: #fff1f0;
+    --c-candy-300: #ffdbd6;
+    --c-candy-400: #fe9d8f;
+    --c-candy-500: #f7725e;
+    --c-candy-600: #ea4d33;
+    --c-candy-700: #db3012;
+    --c-honey-100: #fff9f1;
+    --c-honey-200: #fff3e3;
+    --c-honey-300: #ffe3be;
+    --c-honey-400: #ffd396;
+    --c-honey-500: #ffc16f;
+    --c-honey-600: #ffb24e;
+    --c-honey-700: #f9a02d;
+    --c-minion-100: #fffbeb;
+    --c-minion-200: #fff9de;
+    --c-minion-300: #fff5ca;
+    --c-minion-400: #ffefad;
+    --c-minion-500: #ffe677;
+    --c-minion-600: #ffde4e;
+    --c-minion-700: #fdd319;
+    --c-kiwi-100: #eefdf5;
+    --c-kiwi-200: #e8faf0;
+    --c-kiwi-300: #bee9d1;
+    --c-kiwi-400: #80d1a5;
+    --c-kiwi-500: #51c386;
+    --c-kiwi-600: #4cb27b;
+    --c-kiwi-700: #3fa66e;
+    --c-karl-100: #faf6f2;
+    --c-karl-200: #faf6f2;
+    --c-karl-300: #ececed;
+    --c-karl-400: #f5eee7;
+    --c-karl-500: #f5eee7;
+    --c-karl-600: #f5eee7;
+    --c-karl-700: #f0ddca;
+    --c-very-peri-100: #f1f1ff;
+    --c-very-peri-200: #ebebff;
+    --c-very-peri-300: #bdbcf3;
+    --c-very-peri-400: #a2a0ec;
+    --c-very-peri-500: #7b79e3;
+    --c-very-peri-600: #6a69cc;
+    --c-very-peri-700: #5957c0;
+    --c-white: #fff;
+    --c-gray-100: #f8f8f9;
+    --c-gray-200: #f4f4f5;
+    --c-gray-300: #e8e8ea;
+    --c-gray-400: #d6d7d9;
+    --c-gray-500: #a9acb2;
+    --c-gray-600: #91949c;
+    --c-gray-700: #7e828b;
+    --c-gray-800: #464a53;
+    --c-gray-900: #121316;
+    --c-black: #000;
+    --c-new-black: #121110;
+    --c-dark-mode: #1d1d23;
+    --c-bg: var(--c-white);
+    --c-text: var(--c-gray-900);
+    --c-link: var(--c-gray-900);
+    --c-border: #ececed;
+    --c-section-bg: #f8f8f9;
+    --c-gray-day-100: #f8f8f9;
+    --border: 1px solid var(--c-border);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    color: var(--c-text);
+    font-family: var(--font-sans);
+}
+
+html, body {
+    font-size: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    width: 100%;
+}
+
+a {
+    color: var(--c-gray-900);
+    text-decoration: none;
+}
+
+#header-container {
+    left: 0;
+    right: 0;
+    top: 0;
+    transition: top .6s;
+    z-index: 9998;
+    background-color: var(--c-white);
+    display: flex;
+    height: 64px;
+    justify-content: space-between;
+    padding: 0 var(--sp1);
+    position: relative;
+}
+
+#header-container .header-wrapper:nth-child(2) {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    display: flex;
+    list-style: none;
+    margin-right: 8px;
+    height: 100%;
+}
+
+.nav-item a {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    white-space: nowrap;
+    align-items: center;
+    color: var(--c-gray-900);
+    cursor: pointer;
+}
+
+.nav-item a div {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 18px var(--sp0);
+}
+
