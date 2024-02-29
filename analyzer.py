@@ -130,7 +130,7 @@ class Analyzer(Thread):
             "total": req_df.shape[0],
             "media": req_media_messages_df.shape[0],
             "links": sum(req_messages_df["urlcount"]),
-            "avgWords": np.sum(req_messages_df['Word_Count']) / req_messages_df.shape[0],
+            "avgWords": np.sum(req_messages_df['Word_Count']) / max(req_messages_df.shape[0], 1),
             "avgMsgsPerDay": resampled.Message.mean(),
             "mostSent": {
                 "date": resampled.Message.idxmax().strftime('%m/%d/%Y'),
