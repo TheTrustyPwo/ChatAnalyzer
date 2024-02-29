@@ -43,7 +43,7 @@ async function* _chart(replay, d3, width, height, bars, axis, labels, ticker, ke
 
 
 function _duration() {
-    return 5;
+    return 100;
 }
 
 function _n() {
